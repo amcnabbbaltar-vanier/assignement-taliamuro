@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public void ButtonClicked(string action)
     {
         // check the name of the clicked game object
-        if (action = "Play")
+        if (action == "Play")
         {
             SceneManager.LoadScene(1);
         }
