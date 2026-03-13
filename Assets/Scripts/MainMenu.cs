@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public void ButtonClicked(string action)
     {
-        SceneManager.LoadScene(1);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        // check the name of the clicked game object
+        if (action = "Play")
+        {
+            SceneManager.LoadScene(1);
+        }
+        else if (action == "Quit")
+        {
+            Application.Quit();
+        }
     }
 }
