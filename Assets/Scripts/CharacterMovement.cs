@@ -8,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
     public float runMultiplier = 2f;
     public float jumpForce = 12f;
     private Rigidbody rb;
-    private bool isGrounded;
+    public bool isGrounded;
     private float jumpHoldTimer;
     private bool isHoldingJump;
     public bool canDoubleJump = false;

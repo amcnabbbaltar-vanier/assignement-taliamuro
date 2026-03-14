@@ -1682,7 +1682,7 @@ GameObject:
   - component: {fileID: 1027559884138143172}
   - component: {fileID: 5324611241291387476}
   - component: {fileID: 5350154158508262512}
-  - component: {fileID: 7205333592777089430}
+  - component: {fileID: -2606401924756343140}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1720,9 +1720,9 @@ Animator:
   m_GameObject: {fileID: 6799155194134901007}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e89a51ebe0ea2ed4a8efda80e5099a3c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6deab2304e3cd274db941195d1a79a9e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3a50f09da830462479e5de4d76b3f30c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1756,7 +1756,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &5324611241291387476
 CapsuleCollider:
@@ -1794,12 +1794,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
-  runSpeed: 8
-  jumpHeight: 2
-  rotationSpeed: 10
-  groundCheckDistance: 1.1
-  virtualCamera: {fileID: 0}
---- !u!114 &7205333592777089430
+  runMultiplier: 2
+  jumpForce: 2
+  isGrounded: 0
+  canDoubleJump: 0
+--- !u!114 &-2606401924756343140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1808,7 +1807,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6799155194134901007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8faa0fad31d575646a1ed6198c5d68c7, type: 3}
+  m_Script: {fileID: 11500000, guid: fc405955d07562a48b155fe9b6947093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6938777251474795721
