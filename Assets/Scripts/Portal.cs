@@ -4,41 +4,17 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public bool isFinalPortal = false;
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Portal"))
+        if (!other.CompareTag("Portal")) return;
+
+        if (isFinalPortal)
         {
             Debug.Log("Entered portal");
-            GameManager.Instance.LoadNextLevel();
+            GameManager.Instance.gameFinished = true;
         }
+
+            GameManager.Instance.LoadNextLevel();
     }
-
-    // void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.CompareTag("Portal"))
-    //     {
-    //         Debug.Log("Portal touched");
-
-    //         if (GameManager.Instance != null)
-    //         {
-    //             GameManager.Instance.LoadNextLevel();
-    //         }
-    //         else
-    //         {
-    //             Debug.LogError("GameManager Instance is NULL");
-    //         }
-    //     }
-    // }
 }

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public int characterHealth = 3;
     public float timer = 0f;
+    public bool gameFinished = false;
 
     void Awake()
     {
@@ -37,7 +38,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        if (!gameFinished)
+        {
+            timer += Time.deltaTime;
+        }
     }
 
     /*
