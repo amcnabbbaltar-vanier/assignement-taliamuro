@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour
     /*
         Adds points to the player's score
     */
-    public void AddScore(int amount)
+    public void AddScore()
     {
-        score += amount;
+        score += 50;
     }
 
     /*

@@ -12,7 +12,7 @@ public class Pickup : MonoBehaviour
     {
         SpeedBoost,
         JumpBoost,
-        Score
+        ScoreBoost
     }
 
     public PickupType type;
@@ -24,19 +24,15 @@ public class Pickup : MonoBehaviour
     {
         // Rotate pickup
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
-
-        // Hover animation
-        float hover = Mathf.Sin(Time.time) * 0.002f;
-        transform.position += new Vector3(0, hover, 0);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
         
-        if (type == PickupType.Score)
+        if (type == PickupType.ScoreBoost)
         {
-            GameManager.Instance.AddScore(50);
+            GameManager.Instance.AddScore();
             Destroy(gameObject);
         }
 
