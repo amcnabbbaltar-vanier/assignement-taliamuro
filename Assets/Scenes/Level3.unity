@@ -2083,7 +2083,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3924701765927899326, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_Name
-      value: Trap8 (3)
+      value: Trap11
       objectReference: {fileID: 0}
     - target: {fileID: 6260472724627232411, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2197,7 +2197,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3924701765927899326, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_Name
-      value: Trap8 (2)
+      value: Trap10
       objectReference: {fileID: 0}
     - target: {fileID: 6260472724627232411, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2311,7 +2311,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3924701765927899326, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_Name
-      value: Trap8 (1)
+      value: Trap9
       objectReference: {fileID: 0}
     - target: {fileID: 6260472724627232411, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2368,7 +2368,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3924701765927899326, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_Name
-      value: Trap8 (4)
+      value: Trap12
       objectReference: {fileID: 0}
     - target: {fileID: 6260472724627232411, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2949,7 +2949,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3924701765927899326, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_Name
-      value: Trap9
+      value: Trap13
       objectReference: {fileID: 0}
     - target: {fileID: 6260472724627232411, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3406,7 +3406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3924701765927899326, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_Name
-      value: Trap10
+      value: Trap14
       objectReference: {fileID: 0}
     - target: {fileID: 6260472724627232411, guid: 77517804ec8abcc409ded5901693dfbd, type: 3}
       propertyPath: m_LocalPosition.x

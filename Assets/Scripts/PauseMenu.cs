@@ -5,32 +5,48 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseUI;
+    private bool isPaused = false;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            if (isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
         }
     }
 
-    void TogglePause()
+    public void Pause()
     {
-        bool isPaused = pauseUI.activeSelf;
-        pauseUI.SetActive(!isPaused);
-        Time.timeScale = isPaused? 1 : 0;
+        pauseUI.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        pauseUI.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void RestartLevel()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
         GameManager.Instance.RestartLevel();
     }
 
-    public void QuitToMenu()
+    public void QuitToMainMenu()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
+        GameManager.Instance.ResetGame();
         GameManager.Instance.LoadMainMenu();
     }
 }
