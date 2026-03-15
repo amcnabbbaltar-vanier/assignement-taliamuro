@@ -9,7 +9,7 @@ public class CharacterHealth : MonoBehaviour
     /*
         Called when the character takes damage
     */
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, bool forceRestart = false)
     {
         if (!canTakeDamage)
         {
@@ -18,12 +18,33 @@ public class CharacterHealth : MonoBehaviour
 
         GameManager.Instance.characterHealth -= amount;
 
+        // Prevent health from going below zero
+        if (GameManager.Instance.characterHealth < 0)
+        {
+            GameManager.Instance.characterHealth = 0;
+        }
+
         Debug.Log("Health: " + GameManager.Instance.characterHealth);
 
-        // If the health reaches zero, restart the level
-        if (GameManager.Instance.characterHealth <= 0)
+        // determine whether the level should restart
+        if (forceRestart)
         {
+            // always restart when falling
+            if (GameManager.Instance.characterHealth == 0)
+            {
+                // If health is 0, reset to 3
+                GameManager.Instance.characterHealth = 3;
+            }
             GameManager.Instance.RestartLevel();
+        }
+        else
+        {
+            // only restart if health is 0 (trap logic)
+            if (GameManager.Instance.characterHealth == 0)
+            {
+                GameManager.Instance.characterHealth = 3;
+                GameManager.Instance.RestartLevel();
+            }
         }
 
         StartCoroutine(DamageCooldown());

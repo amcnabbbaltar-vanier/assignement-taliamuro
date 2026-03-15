@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class FallOffWorld : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            CharacterHealth health = collision.gameObject.GetComponent<CharacterHealth>();
+            CharacterHealth health = other.GetComponent<CharacterHealth>();
 
             if (health != null)
             {
-                health.TakeDamage(1);
-                GameManager.Instance.RestartLevel();
+                health.TakeDamage(1, true); // force the restart without resetting health
             }
         }
     }
