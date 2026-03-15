@@ -61,10 +61,10 @@ public class Pickup : MonoBehaviour
     IEnumerator JumpBoost(Collider character)
     {
         CharacterMovement movement = character.GetComponent<CharacterMovement>();
-        movement.canDoubleJump = true;
+        movement.jumpForce = 8;
         DisablePickup();
         yield return new WaitForSeconds(30);
-        movement.canDoubleJump = false;
+        movement.jumpForce = 5;
         EnablePickup();
     }
 

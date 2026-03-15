@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class TimerUI : MonoBehaviour
 {
-    public TextMeshPro timerText;
+    public Text timerText;
     void Update()
     {
         timerText.text = "Time: " + GameManager.Instance.timer.ToString("F1");
