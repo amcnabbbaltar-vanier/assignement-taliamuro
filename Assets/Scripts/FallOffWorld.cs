@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trap : MonoBehaviour
+public class FallOffWorld : MonoBehaviour
 {
-    /*
-        Damages the character when they touch a trap
-    */
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -16,8 +13,8 @@ public class Trap : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(1);
+                GameManager.Instance.RestartLevel();
             }
         }
     }
 }
-    

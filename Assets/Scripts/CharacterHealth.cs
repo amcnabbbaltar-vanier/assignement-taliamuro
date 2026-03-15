@@ -26,7 +26,7 @@ public class CharacterHealth : MonoBehaviour
             GameManager.Instance.RestartLevel();
         }
 
-        StartCoroutine(damageCooldown());
+        StartCoroutine(DamageCooldown());
     }
 
     IEnumerator DamageCooldown()
