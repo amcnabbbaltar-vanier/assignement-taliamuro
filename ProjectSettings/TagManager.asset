@@ -8,6 +8,7 @@ TagManager:
   - QuitButton
   - Ground
   - Portal
+  - Trap
   layers:
   - Default
   - TransparentFX

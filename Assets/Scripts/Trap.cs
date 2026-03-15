@@ -7,11 +7,11 @@ public class Trap : MonoBehaviour
     /*
         Damages the character when they touch a trap
     */
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            CharacterHealth health = other.GetComponent<CharacterHealth>();
+            CharacterHealth health = collision.gameObject.GetComponent<CharacterHealth>();
 
             if (health != null)
             {
